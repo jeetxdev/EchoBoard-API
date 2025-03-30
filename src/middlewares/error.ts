@@ -63,7 +63,7 @@ export const errorConverter = (err: unknown, req: Request, res: Response, next: 
     }
     next(error);
 }
-export const handleError = (err: unknown, req: Request, res: Response, next: NextFunction) => {
+export const handleError = (err: unknown, req: Request, res: Response) => {
     const {statusCode, message, error, stack} = err as any;
     const response = {
         code: statusCode,

@@ -1,5 +1,5 @@
 import userRoute from "@/routes/user.route";
-import {NextFunction, Request, Response, Router} from "express";
+import {Request, Response, Router} from "express";
 import HTTP_STATUS from "@/constants/httpStatus";
 import ApiError from "@/utils/ApiError";
 
