@@ -1,7 +1,7 @@
-import userRoute from "@/routes/user.route";
+import userRoute from "../routes/user.route";
 import {Request, Response, Router} from "express";
-import HTTP_STATUS from "@/constants/httpStatus";
-import ApiError from "@/utils/ApiError";
+import HTTP_STATUS from "../constants/httpStatus";
+import ApiError from "../utils/ApiError";
 
 const defaultRouter = Router();
 

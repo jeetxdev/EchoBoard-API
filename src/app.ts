@@ -1,8 +1,8 @@
 import express from "express";
 import cors from "cors";
-import defaultRouter from "@/routes";
+import defaultRouter from "./routes";
 import dotenv from "dotenv";
-import {errorConverter, handleError} from "@/middlewares/error";
+import {errorConverter, handleError} from "./middlewares/error";
 
 dotenv.config();
 const app = express();

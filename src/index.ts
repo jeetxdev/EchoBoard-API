@@ -1,6 +1,6 @@
 import { Server } from "http";
-import app from "@/app";
-import connectDB from "@/lib/db";
+import app from "./app";
+import connectDB from "./lib/db";
 
 const port = process.env.PORT || 5000;
 let server: Server | null;

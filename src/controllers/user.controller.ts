@@ -1,7 +1,7 @@
 import {Request, RequestHandler, Response} from "express";
-import ApiError from "@/utils/ApiError";
-import HTTP_STATUS from "@/constants/httpStatus";
-import {findUserByEmail, saveUser} from "@/services/user.service";
+import ApiError from "../utils/ApiError";
+import HTTP_STATUS from "../constants/httpStatus";
+import {findUserByEmail, saveUser} from "../services/user.service";
 
 export const createUser: RequestHandler = async (
     req: Request,

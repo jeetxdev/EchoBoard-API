@@ -1,4 +1,4 @@
-import User, {UserType} from "@/models/user.model"
+import User, {UserType} from "../models/user.model"
 
 export const saveUser = async (data: Partial<UserType>) => {
     const user = new User(data);

@@ -1,8 +1,8 @@
 import {Request, Response, NextFunction} from "express";
 import {ZodError, ZodFormattedError} from "zod";
 import {MongooseError} from "mongoose";
-import ApiError from "@/utils/ApiError";
-import HTTP_STATUS from "@/constants/httpStatus";
+import ApiError from "../utils/ApiError";
+import HTTP_STATUS from "../constants/httpStatus";
 
 function flattenZodErrors(
     formattedError: ZodFormattedError<any>,
@@ -63,7 +63,7 @@ export const errorConverter = (err: unknown, req: Request, res: Response, next: 
     }
     next(error);
 }
-export const handleError = (err: unknown, req: Request, res: Response) => {
+export const handleError = (err: unknown, req: Request, res: Response, next: NextFunction) => {
     const {statusCode, message, error, stack} = err as any;
     const response = {
         code: statusCode,
